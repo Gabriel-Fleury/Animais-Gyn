@@ -1,0 +1,550 @@
+/* .header{ 
+  background-color: #1A61D9; 
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  font-family: 'Agbalumo', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+   /* Garante que fique acima de outros elementos */
+
+
+   /* Variáveis de cores - Tema petshop/resgate */
+:root {
+  --primary: #FF6B35; /* Laranja - Energia, urgência */
+  --primary-dark: #E55A2B;
+  --secondary: #4ECDC4; /* Turquesa - Confiança, cuidado */
+  --secondary-dark: #3DB4AC;
+  --accent: #FFD166; /* Amarelo - Esperança, alerta */
+  --dark: #1A535C; /* Azul escuro - Profissionalismo */
+  --light: #F7FFF7; /* Verde muito claro - Pureza, frescor */
+  --gray: #6C757D;
+  --gray-light: #E9ECEF;
+  --success: #06D6A0; /* Verde - Sucesso, encontrado */
+  --danger: #EF476F; /* Vermelho - Urgência, perigo */
+}
+
+/* Reset e estilos base */
+.header {
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Top Bar */
+.topBar {
+  background: linear-gradient(135deg, var(--dark) 0%, #265C6B 100%);
+  color: white;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.topBar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emergencyContacts {
+  display: flex;
+  gap: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.contactItem:hover {
+  color: var(--accent);
+}
+
+.contactLabel {
+  font-weight: 600;
+}
+
+.contactNumber {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.loginBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Main Header */
+.mainHeader {
+  background: var(--light);
+  padding: 20px 0;
+  position: relative;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  color: var(--primary);
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0;
+  letter-spacing: -0.5px;
+  background: linear-gradient(45deg, var(--dark), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoSubtitle {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Search Container */
+.searchContainer {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 40px;
+  transition: all 0.3s ease;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 4px;
+  box-shadow: 0 4px 15px rgba(26, 83, 92, 0.1);
+  border: 2px solid var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.searchWrapper:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.2);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 18px;
+  color: var(--gray);
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 20px 12px 50px;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--dark);
+  outline: none;
+  border-radius: 30px;
+}
+
+.searchInput::placeholder {
+  color: var(--gray);
+}
+
+.searchButton {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.searchButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+}
+
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  align-items: center;
+}
+
+.emergencyCta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.emergencyCta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.ctaText {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.ctaSubtext {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Menu Toggle (Mobile) */
+.menuToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--dark);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menuToggle:hover {
+  background: var(--gray-light);
+}
+
+/* Navigation */
+.navigation {
+  background: white;
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 3px solid var(--secondary);
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: block;
+  padding: 18px 24px;
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navLink:hover {
+  color: var(--primary);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--secondary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+/* Alert Banner */
+.alertBanner {
+  background: linear-gradient(90deg, var(--accent) 0%, #FFE082 100%);
+  padding: 12px 0;
+  text-align: center;
+  border-bottom: 2px dashed var(--primary);
+}
+
+.alertBanner .container {
+  justify-content: center;
+  gap: 12px;
+}
+
+.alertIcon {
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+}
+
+.alertBanner p {
+  margin: 0;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.alertBanner strong {
+  color: var(--danger);
+}
+
+/* Mobile Search */
+.mobileSearch {
+  display: none;
+  padding: 20px 0;
+}
+
+.mobileSearchWrapper {
+  display: flex;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid var(--gray-light);
+}
+
+.mobileSearchInput {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.mobileSearchButton {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileSearchButton:hover {
+  background: var(--secondary-dark);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .searchContainer {
+    max-width: 400px;
+    margin: 0 20px;
+  }
+  
+  .emergencyContacts {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  
+  .topBar .container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .emergencyContacts {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .topBarRight {
+    justify-content: center;
+  }
+  
+  .mainHeader .container {
+    position: relative;
+  }
+  
+  .logoSection {
+    flex: 1;
+  }
+  
+  .searchContainer {
+    display: none;
+  }
+  
+  .ctaSection {
+    display: none;
+  }
+  
+  .menuToggle {
+    display: block;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navigation.menuOpen {
+    max-height: 500px;
+  }
+  
+  .navList {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .navLink {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  
+  .navLink::after {
+    display: none;
+  }
+  
+  .mobileSearch {
+    display: block;
+  }
+  
+  .alertBanner p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoTitle {
+    font-size: 1.5rem;
+  }
+  
+  .logoSubtitle {
+    font-size: 0.8rem;
+  }
+  
+  .topBar {
+    font-size: 0.8rem;
+  }
+  
+  .alertBanner p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Estilo para estado ativo */
+.navLink:global(.active) {
+  color: var(--primary);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.navLink:global(.active)::after {
+  width: 80%;
+}
+
+/* Efeitos especiais */
+.logoIcon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+

@@ -1,0 +1,231 @@
+/* src/pages/Home/Home.module.css */
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1A535C, #4ECDC4);
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background: #FF6B35;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+}
+
+.features {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.features h2 {
+  color: #1A535C;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+  color: #FF6B35;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  color: #6C757D;
+  line-height: 1.6;
+}
+
+/* Stats Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.statCard {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(78,205,196,0.3);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(78, 205, 196);
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  color: #1A535C;
+  font-weight: 600;
+}
+
+/* Testimonials */
+.testimonials {
+  
+  padding: 60px 0;
+  background: white;
+  border-radius: 30px;
+  margin: 40px 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #1A535C;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonialGrid {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.testimonial {
+  
+  background: #F7FFF7;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid #E9ECEF;
+}
+
+.quote {
+  font-size: 4rem;
+  color: #4ECDC4;
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.author {
+  display: block;
+  font-weight: 700;
+  color: #FF6B35;
+  margin-bottom: 5px;
+}
+
+.location {
+  color: #6C757D;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #1A535C, #4ECDC4);
+  border-radius: 30px;
+  padding: 60px;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+}
+
+.ctaContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  background: #FF6B35;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ctaPrimary:hover {
+  background: #E55A2B;
+  transform: translateY(-2px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ctaSecondary:hover {
+  background: white;
+  color: #1A535C;
+}
